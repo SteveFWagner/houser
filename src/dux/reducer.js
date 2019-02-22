@@ -4,6 +4,9 @@ const initialState = {
     city:``,
     state:``,
     zip:``,
+    img:``,
+    mortgage:``,
+    rent:``
     
 }
 
@@ -12,6 +15,10 @@ const UPDATE_ADDRESS="UPDATE_ADDRESS"
 const UPDATE_CITY="UPDATE_CITY"
 const UPDATE_STATE="UPDATE_STATE"
 const UPDATE_ZIP="UPDATE_ZIP"
+const UPDATE_IMG="UPDATE_IMG"
+const UPDATE_MORTGAGE="UPDATE_MORTGAGE"
+const UPDATE_RENT="UPDATE_RENT"
+const CLEAR_INPUT="CLEAR_INPUT"
 
 function reducer(state = initialState, action){
     switch (action.type) {
@@ -25,6 +32,14 @@ function reducer(state = initialState, action){
             return {...state, state:action.payload}
         case UPDATE_ZIP:
             return {...state, zip:action.payload}
+        case UPDATE_IMG:
+            return {...state, img:action.payload}
+        case UPDATE_MORTGAGE:
+            return {...state, mortgage:action.payload}
+        case UPDATE_RENT:
+            return {...state, rent:action.payload}
+        case CLEAR_INPUT:
+            return {...initialState}
         default:
             return state
     }
@@ -58,6 +73,29 @@ export function updateZip(zip){
     return{
         type:UPDATE_ZIP,
         payload:zip
+    }
+}
+export function updateImg(img){
+    return{
+        type:UPDATE_IMG,
+        payload:img
+    }
+}
+export function updateMortgage(mortgage){
+    return{
+        type:UPDATE_MORTGAGE,
+        payload:mortgage
+    }
+}
+export function updateRent(rent){
+    return{
+        type:UPDATE_RENT,
+        payload:rent
+    }
+}
+export function clearInput(){
+    return{
+        type:CLEAR_INPUT
     }
 }
 

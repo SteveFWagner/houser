@@ -12,7 +12,7 @@ class App extends Component {
         <div style={{display:'flex', justifyContent:'center'}}>
           {routes}
           <p>
-            <Link to='/wizard'><button>Add New Property</button></Link>
+            <Link to='/wizard/step1'><button>Add New Property</button></Link>
           </p>
         </div>
       </div>

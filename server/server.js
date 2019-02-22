@@ -4,6 +4,7 @@ const Express = require('express')
 const BodyParser = require('body-parser')
 const Massive = require('massive')
 const app = Express()
+const ct = require('./controller')
 
 app.use(BodyParser.json())
 
@@ -18,3 +19,6 @@ Massive(CONNECTION_STRING).then(db =>{
 
 //Endpoints below
 
+app.get('/api/houses', ct.getHouses)
+app.post('/api/house', ct.addHouse)
+app.delete('/api/house/:id', ct.deleteHouse)
