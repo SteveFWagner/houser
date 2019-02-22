@@ -21,7 +21,7 @@ class StepThree extends Component{
                 <input onChange={(e)=>updateMortgage(e.target.value)}/>
                 <h4>Desired Monthy Rent</h4>
                 <input onChange={(e)=>updateRent(e.target.value)}/><br/>
-                <Link to='/wizard/step2'><button>Previous Step</button></Link><br/>
+                <Link to='/wizard/step2'><button>Previous Step</button></Link>
                 <button onClick={()=>this.handlePost()}>Complete</button>
             </div>
         )

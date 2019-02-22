@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import House from './House'
 import Axios from 'axios';
+import {Link} from 'react-router-dom'
 
 
 class Dashboard extends Component{
@@ -34,13 +35,24 @@ class Dashboard extends Component{
         let mappedHouses = this.state.houses.map((house)=>{
             let {id,name,address,city,state,zip,img,mortgage,rent} = house
             return(
-                <House key={id} name={name} address={address} city={city} state={state} zip={zip}
-                id={id} img={img} mortgage={mortgage} rent={rent} handleDelete={this.handleDelete}/>
+                <div style={{margin:"10px"}}>
+                    <House key={id} name={name} address={address} city={city} state={state} zip={zip}
+                    id={id} img={img} mortgage={mortgage} rent={rent} handleDelete={this.handleDelete}/>
+                </div>
             )
         })
         return(
-            <div>
-                <h2>Dashboard</h2>
+            <div style={{background:"#E5F4EC"}}>
+                <div style={{display:"flex", justifyContent:"space-around"}}>
+                    <h2 style={{fontSize:"50px",margin:"0px"}}>Dashboard</h2>
+                    <Link to='/wizard/step1'>
+                        <button style={{border:"none", background:"#8AEA92", fontSize:"20px", 
+                         boxSizing:"border-box", fontWeight:"bold", margin:"10px"}}>
+                            Add New Property
+                        </button>
+                    </Link>
+                </div>
+                <p style={{textAlign:"center"}}>___________________________________________________________</p>
                 {mappedHouses}
             </div>
         )
