@@ -52,8 +52,8 @@ class Dashboard extends Component{
                         </button>
                     </Link>
                 </div>
-                <p style={{textAlign:"center"}}>___________________________________________________________</p>
-                {mappedHouses}
+                <h2 style={{paddingLeft:"30px"}}>Home Listings</h2>
+                    {mappedHouses}
             </div>
         )
     }
