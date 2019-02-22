@@ -9,10 +9,12 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <p>
-          <Link to='/wizard'><button>Add New Property</button></Link>
-        </p>
-        {routes}
+        <div style={{display:'flex', justifyContent:'center'}}>
+          {routes}
+          <p>
+            <Link to='/wizard'><button>Add New Property</button></Link>
+          </p>
+        </div>
       </div>
     );
   }

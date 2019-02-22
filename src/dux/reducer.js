@@ -36,27 +36,29 @@ export function updateName(name){
         payload:name
     }
 }
-export function updateName(address){
+export function updateAddress(address){
     return{
         type:UPDATE_ADDRESS,
         payload:address
     }
 }
-export function updateName(city){
+export function updateCity(city){
     return{
         type:UPDATE_CITY,
         payload:city
     }
 }
-export function updateName(state){
+export function updateState(state){
     return{
         type:UPDATE_STATE,
         payload:state
     }
 }
-export function updateName(zip){
+export function updateZip(zip){
     return{
         type:UPDATE_ZIP,
         payload:zip
     }
 }
+
+export default reducer
