@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dashboard from './components/Dashboard'
-import Wizard from './components/Wizard'
 import Header from './components/Header'
+import {Link} from 'react-router-dom'
+import routes from './routes'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Header/>
-        <Dashboard/>
-        <Wizard/>
+        <p>
+          <Link to='/wizard'><button>Add New Property</button></Link>
+        </p>
+        {routes}
       </div>
     );
   }
